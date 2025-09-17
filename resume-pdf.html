@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arvind Verma - Resume</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #333;
+            --background-color: #f5f6fa;
+            --section-bg: #ffffff;
+            --light-accent: #ecf0f1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--section-bg);
+            padding: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--background-color);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 28px;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            margin-top: 1rem;
+            color: var(--primary-color);
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        section h2 {
+            color: var(--primary-color);
+            font-size: 20px;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--background-color);
+        }
+
+        .leadership .skill-content {
+            background-color: var(--light-accent);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .leadership ul {
+            list-style: none;
+        }
+
+        .leadership li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+
+        .leadership li::before {
+            content: "►";
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+            font-size: 0.8rem;
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .expertise-item {
+            background-color: var(--light-accent);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .expertise-item h3 {
+            color: var(--primary-color);
+            font-size: 16px;
+            margin-bottom: 1rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 1px solid rgba(52, 152, 219, 0.2);
+        }
+
+        .expertise-item ul {
+            list-style: none;
+        }
+
+        .expertise-item li {
+            margin-bottom: 0.6rem;
+            padding-left: 1.2rem;
+            position: relative;
+            line-height: 1.4;
+        }
+
+        .expertise-item li::before {
+            content: "•";
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .job {
+            margin-bottom: 2rem;
+            page-break-inside: avoid;
+        }
+
+        .job h3 {
+            color: var(--primary-color);
+            font-size: 18px;
+            margin-bottom: 0.3rem;
+        }
+
+        .job h4 {
+            color: var(--secondary-color);
+            font-size: 16px;
+            margin: 0.8rem 0 0.4rem;
+        }
+
+        .duration, .location {
+            color: #666;
+            font-style: italic;
+            font-size: 14px;
+            margin-right: 1rem;
+        }
+
+        .job ul {
+            list-style: none;
+            margin: 0.8rem 0;
+        }
+
+        .job li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+
+        .job li::before {
+            content: "▹";
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .education {
+            page-break-inside: avoid;
+        }
+
+        .degree {
+            margin-bottom: 1.5rem;
+        }
+
+        .degree h3 {
+            color: var(--secondary-color);
+            font-size: 16px;
+            margin-bottom: 0.3rem;
+        }
+
+        @media print {
+            body {
+                padding: 20px;
+                background: white;
+            }
+
+            .expertise-grid {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Arvind Verma</h1>
+        <h2>Associate Director, Software Engineering</h2>
+    </header>
+
+    <section class="leadership">
+        <h2>Leadership & Management</h2>
+        <div class="skill-content">
+            <ul>
+                <li>Technology Leader with strategic approach to solving business problems, expertise in Ideation to products in production, and fostering a culture of innovation</li>
+                <li>Expertise in forming high-performing teams, change management, recruitment, onboarding, and mentoring</li>
+                <li>Led and Managed different teams comprising 4 to 30 team members, providing Strategic vision, setting clear measurable goals, and aligning them to organizational goals</li>
+                <li>Successfully participated in hiring, onboarding, and mentoring over 50 team members across different organizations</li>
+                <li>Proven track record in stakeholder management and product roadmap development</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="technical-expertise">
+        <h2>Technical Expertise</h2>
+        <div class="expertise-grid">
+            <div class="expertise-item">
+                <h3>Full Stack Development & Data Engineering</h3>
+                <ul>
+                    <li>16 years of experience designing, developing, testing, and maintaining enterprise-level applications</li>
+                    <li>Proficient in Java, Python, Scala, TypeScript with frameworks like SpringBoot, React, and Django</li>
+                    <li>Extensive experience in JMS services, RESTful APIs, and web applications development</li>
+                    <li>Expert in building large-scale distributed systems and customer-facing products</li>
+                </ul>
+            </div>
+            <div class="expertise-item">
+                <h3>Cloud Technologies & Data Processing</h3>
+                <ul>
+                    <li>Comprehensive experience with AWS (S3, Lambda, DynamoDB, RDS, EC2, SQS, CloudWatch, OpenSearch)</li>
+                    <li>GCP expertise including BigQuery, Cloud Storage, and DataProc implementation</li>
+                    <li>Proficient in Python and Scala using Spark, Hadoop, Databricks Runtime Environment</li>
+                    <li>AWS Cloud Practitioner certified (expired June 2023)</li>
+                </ul>
+            </div>
+            <div class="expertise-item">
+                <h3>Data Warehousing & Databases</h3>
+                <ul>
+                    <li>Expert in Snowflake and RedShift for large-scale data warehousing solutions</li>
+                    <li>Extensive experience in data integration, transformation, and querying of large datasets</li>
+                    <li>Proficient with NoSQL, SQL, Oracle 11g, Postgres, Aurora Postgres, MySQL, SQL Server</li>
+                    <li>Expertise in Databricks for Delta Lake creation and ETL pipeline management</li>
+                </ul>
+            </div>
+            <div class="expertise-item">
+                <h3>DevOps & Quality Assurance</h3>
+                <ul>
+                    <li>Experience with Selenium, Fitnesse, Cucumber for comprehensive test automation</li>
+                    <li>Proficient in Unix OS, BASH scripting, AWS CLI for automation and deployment</li>
+                    <li>Skilled in monitoring and observability using Datadog and Elastic Search</li>
+                    <li>Certified SAFe 5 Practitioner with expertise in Agile methodologies</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience">
+        <h2>Professional Experience</h2>
+        
+        <div class="job">
+            <h3>Associate Director, Software Engineering - S&P Global</h3>
+            <span class="duration">December 2019 - Present</span>
+            <span class="location">VA</span>
+            
+            <div class="job-section">
+                <h4>Product Development & Leadership</h4>
+                <ul>
+                    <li>Managing and providing technical leadership to a product development team managing 350+ ETL pipelines, packaging over 50 billion rows of data</li>
+                    <li>Participate in hiring, mentoring, team building, performance management, and change management</li>
+                    <li>Collaborate with leadership to build product roadmap, drive technological enhancements, and demonstrate products to users</li>
+                </ul>
+            </div>
+            
+            <div class="job-section">
+                <h4>Technical Skills & Contributions</h4>
+                <ul>
+                    <li>Design and develop UI using React Framework and TypeScript, and multiple backend services using Java, Scala, and Python</li>
+                    <li>Built ETL service using Scala, reducing data packaging time from 1 day to 2 hours</li>
+                    <li>Implement GenAI solutions for internal product ChatBot development</li>
+                    <li>Create and maintain Azure Pipelines for code and infrastructure deployment</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="job">
+            <h3>Engagement Manager - Tech Mahindra Limited</h3>
+            <span class="duration">November 2011 - December 2019</span>
+            <span class="location">Omaha, NE</span>
+            <ul>
+                <li>Led teams of 4-25 SEs and SDETs in designing and building enterprise applications for Union Pacific Railroad's Positive Train Control initiative</li>
+                <li>Participated in hiring, onboarding, and mentoring over 50 team members</li>
+                <li>Developed Python scripts and Java/SpringBoot test automation tools for microservices</li>
+                <li>Administered Jenkins for CI/CD pipelines and test automation</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <h3>QA Test Engineer - Impetus InfoTech India Pvt. Ltd</h3>
+            <span class="duration">February 2010 - November 2011</span>
+            <span class="location">Indore, M.P.</span>
+            <ul>
+                <li>Development of Mobile applications on Android Operating system</li>
+                <li>Managed a team of 4 QEs, implementing test automation</li>
+                <li>Created comprehensive test suites including functional, smoke, sanity, and performance tests</li>
+                <li>Developed automation scripts using Robotium for Integration, functional, and UI testing</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <h3>QA Tester - Electronic Arts Games</h3>
+            <span class="duration">August 2008 - February 2010</span>
+            <span class="location">Hyderabad, Telangana</span>
+            <ul>
+                <li>Involved in testing and automation for bestselling games like FIFA, Wolverine, Sims</li>
+                <li>Transitioned to game design and development, focusing on game engine development</li>
+                <li>Created and executed test cases, analyzed results, and prepared bug reports</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="education">
+        <h2>Education</h2>
+        <div class="degree">
+            <h3>Master of Business Administration (Executive)</h3>
+            <p>Symbiosis Institute of Business Management, Pune</p>
+            <p class="duration">July 2012 - December 2014</p>
+            <p>Specialization: General Management</p>
+        </div>
+        <div class="degree">
+            <h3>B.E. in Computer Science and Engineering</h3>
+            <p>Malwa Institute of Technology, Indore</p>
+            <p class="duration">October 2004 - June 2008</p>
+        </div>
+    </section>
+</body>
+</html>
