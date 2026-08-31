@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arvind Verma - Resume</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #333;
+            --background-color: #f5f6fa;
+            --section-bg: #ffffff;
+            --light-accent: #ecf0f1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--section-bg);
+            padding: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--background-color);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 28px;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            margin-top: 1rem;
+            color: var(--primary-color);
+            font-size: 14px;
+        }
+
+        .contact-info a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        section h2 {
+            color: var(--primary-color);
+            font-size: 20px;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--background-color);
+        }
+
+        .summary {
+            background-color: var(--light-accent);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .expertise-item {
+            background-color: var(--light-accent);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .expertise-item h3 {
+            color: var(--primary-color);
+            font-size: 16px;
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 1px solid rgba(52, 152, 219, 0.2);
+        }
+
+        .expertise-item p {
+            line-height: 1.7;
+        }
+
+        .job {
+            margin-bottom: 2rem;
+            page-break-inside: avoid;
+        }
+
+        .job h3 {
+            color: var(--primary-color);
+            font-size: 18px;
+            margin-bottom: 0.3rem;
+        }
+
+        .job-meta {
+            color: #666;
+            font-style: italic;
+            font-size: 14px;
+            margin-bottom: 0.8rem;
+        }
+
+        .job ul {
+            list-style: none;
+            margin: 0.8rem 0;
+        }
+
+        .job li {
+            margin-bottom: 0.6rem;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+
+        .job li::before {
+            content: "▹";
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .job h4 {
+            color: var(--secondary-color);
+            font-size: 15px;
+            margin: 1rem 0 0.5rem;
+            font-weight: 600;
+        }
+
+        .education {
+            page-break-inside: avoid;
+        }
+
+        .degree {
+            margin-bottom: 1.5rem;
+        }
+
+        .degree h3 {
+            color: var(--secondary-color);
+            font-size: 16px;
+            margin-bottom: 0.3rem;
+        }
+
+        .degree p {
+            color: #666;
+            font-size: 14px;
+            margin: 0.2rem 0;
+        }
+
+        .certification {
+            page-break-inside: avoid;
+        }
+
+        .cert-item {
+            margin-bottom: 1rem;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+
+        .cert-item::before {
+            content: "✓";
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        @media print {
+            body {
+                padding: 20px;
+                background: white;
+            }
+
+            .expertise-grid {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Arvind Verma</h1>
+        <h2>Associate Director Software Engineering | AI Transformation Leadership | Product Engineering</h2>
+        <div class="contact-info">
+            402-378-8550 | arvind_verma50@yahoo.com | GitHub | LinkedIn | TechnologyBlog
+        </div>
+    </header>
+
+    <section class="summary"><p>Technology leader with 18 years of experience providing leadership, guidance, oversight, and
+mentorship in software engineering, product engineering, data engineering, multi-cloud
+environments (AWS, GCP, and Azure), AI, and Agentic AI application development, from
+ideation through production and enterprise-scale rollout. Adept at shaping long-term Engineering
+strategy and roadmap, cross-functional leadership, resource and capacity planning, scaling
+high-performing engineering teams, establishing governance frameworks, and partnering with
+senior executives to deliver measurable value. Deep knowledge of the financial domain, security
+analysis (both fundamental and technical), Data Packaging and Distribution, Monetization, and
+e-commerce applications targeting institutional customers.</p></section>
+    <section class="technical-expertise"><h2>Skills &amp; Expertise</h2><div class="expertise-grid"><div class="expertise-item"><h3>AI & Machine Learning</h3><p>Generative AI (GPT, Claude, Gemini), Agentic AI, Vertex AI, Google Agent Framework, RAG, MCP, Prompt Engineering, ML Model Development & Optimization, AI Governance & Responsible AI.</p></div><div class="expertise-item"><h3>Software & Full-Stack Engineering</h3><p>Architecture and Design Patterns, Microservices Architecture, API Lifecycle Management, Java Spring Boot, Python (Django/Flask), React/TypeScript, UI Frameworks, High-Availability & Distributed Systems, Reliability & Performance Engineering, Observability & Monitoring (Elastic, OpenSearch, Datadog), Test Automation (Selenium, Fitnesse, Cucumber).</p></div><div class="expertise-item"><h3>Data Engineering & Platforms</h3><p>Enterprise Data Engineering, Data Architecture & Modeling, Data Governance, Medallion Architecture, ETL/ELT, Big Data (Spark/Scala), Databricks, Snowflake, Delta Lake, Data Fabric, SQL/NoSQL (Oracle, Postgres, Aurora, SQL Server, MySQL, MongoDB, Redis).</p></div><div class="expertise-item"><h3>Cloud Architecture & Infrastructure</h3><p>AWS, GCP, Azure, Multi-Cloud Modernization, Serverless & Container Platforms, Cloud Security & IAM, Event-Driven Architecture, Infrastructure as Code (Terraform), CI/CD Pipelines (GitHub Actions, Azure DevOps, Jenkins), Unix/Bash, Cloud CLIs, DevSecOps & Security Tools (Dependabot, MEND, Fortify, WIZ, ArmorCode).</p></div><div class="expertise-item"><h3>Leadership & Delivery</h3><p>Engineering Leadership (teams 4–50), Org Scaling, Hiring & Mentoring, Technical Program Management, Cross-Functional Leadership, Agile (SCRUM, SAFe, Kanban), Enterprise Program Delivery.</p></div></div></section>
+    <section class="experience"><h2>Professional Experience</h2><div class="job"><h3>Associate Director, Software Engineering 12/2019 – Present</h3><div class="job-meta">S&P Global, Virginia, USA</div><ul><li>Ideated, architected, and launched the Xpressfeed AI Accelerator, introducing agentic workflows that significantly accelerated migration of legacy data products.</li></ul><ul><li>Drove enterprise adoption of GitHub Copilot, Claude Code, and other LLM-powered development tools through structured enablement and cost-optimization guidance.</li></ul><ul><li>Delivered full-stack AI-enabled applications using React, TypeScript, Java Spring Boot, Python, SQL, and Scala.</li></ul><ul><li>Led organization-wide AI transformation, including use-case identification, ROI evaluation, and post-implementation measurement.</li></ul><h4>Data Engineering, Analytics & Multi-Cloud Architecture</h4><ul><li>Built and managed large-scale Databricks pipelines delivering data across Delta Sharing, Snowflake, S3, and SFTP channels.</li></ul><ul><li>Directed migration of legacy ETL/ELT workloads into GCP, improving scalability, reliability, and cost efficiency.</li></ul><ul><li>Architected a horizontally scalable data engineering ecosystem that significantly reduced packaging time and improved client onboarding.</li></ul><ul><li>Designed and delivered microservice APIs in GCP, defining both application and infrastructure architecture.</li></ul><ul><li>Provided architectural leadership across AWS and GCP for full-stack product development, AI workloads, and cloud-native data pipelines.</li></ul><h4>GCP Infrastructure, APIs & Data Sharing</h4><ul><li>Designed and automated GCP infrastructure using Terraform, including storage, messaging, compute, IAM, and event-driven integrations.</li></ul><ul><li>Led development of secure, enterprise-grade APIs exposing curated BigQuery datasets through governed data-sharing platforms.</li></ul><ul><li>Defined end-to-end authentication and authorization patterns (OAuth, service account impersonation, token-based access, fine-grained IAM) to strengthen platform security.</li></ul><ul><li>Established reusable Terraform modules and CI/CD patterns to standardize infrastructure provisioning across engineering teams.</li></ul></div><div class="job"><h3>Tech Mahindra Limited – Engagement Manager, Omaha, Nebraska, USA 11/2011 to 12/2019</h3><div class="job-meta">Key Contributions:</div><ul><li>Directed cross-functional teams of 4–25 Software Engineers and SDETs in designing and delivering enterprise applications for Union Pacific Railroad’s Positive Train Control (PTC) initiative, a federally mandated safety program.</li></ul><ul><li>Scaled organisational capability, hiring, onboarding, and mentoring 50+ engineers to support mission-critical systems, fostering a culture of accountability and technical excellence.</li></ul><ul><li>Delivered safety-critical applications that ensured compliance with federal regulations, enhancing operational reliability and reducing risk across Union Pacific’s rail network.</li></ul><ul><li>Partnered with stakeholders to gather requirements, prioritise backlog, and define product enhancements, aligning technical delivery with business objectives.</li></ul><ul><li>Established CI/CD best practices, administering Jenkins pipelines to streamline deployments and strengthen test automation coverage.</li></ul><ul><li>Engineered automation frameworks, developed Python scripts for lab testing and built Java/SpringBoot tools for JMS-based microservices, improving efficiency and reducing manual effort.</li></ul><ul><li>Contributed hands-on technical expertise by writing unit-testable code for safety-critical applications, ensuring robustness and regulatory compliance.</li></ul></div><div class="job"><h3>Impetus InfoTech India Pvt. Ltd – QA Test Engineer Indore, M.P., India 02/2010 – 11/2011</h3><div class="job-meta">Key Contributions:</div><ul><li>Led a team of 4 QA Engineers, introducing automation practices that improved efficiency and reduced release cycles.</li></ul><ul><li>Contributed to Android mobile application development and quality assurance, ensuring cross-platform reliability.</li></ul><ul><li>Designed and executed comprehensive test strategies, strengthening product stability and user experience.</li></ul></div><div class="job"><h3>Electronic Arts Games – QA Tester Hyderabad, Telangana, India 08/2008 – 02/2010</h3><div class="job-meta">Key Contributions:</div><ul><li>Supported QA for bestselling titles, including FIFA, Wolverine, and The Sims, ensuring high performance and immersive user experiences.</li></ul><ul><li>Designed and executed regression, UI, and functionality test cases, contributing to consistent product quality.</li></ul><ul><li>Collaborated with game designers and developers, sparking an early interest in product design and engine development.</li></ul></div></section>
+    <section class="education"><h2>Education</h2><div class="degree"><p>Master of Business Administration (Executive) in General Management from Symbiosis Institute of Business Management, Pune, Maharashtra, India. July 2012 - December 2014</p></div><div class="degree"><p>B.E in Computer Science and Engineering from Malwa Institute of Technology, Indore, M.P. October 2004 - June 2008.</p></div></section>
+    <section class="certification"><h2>Certifications</h2><div class="cert-item">AWS Cloud Practitioner: (expired; but actively using AWS services for the last 7 years)</div><div class="cert-item">SAFe 5 Practitioner: Certified</div></section>
+
+</body>
+</html>

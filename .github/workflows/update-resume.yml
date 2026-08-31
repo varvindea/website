@@ -14,16 +14,9 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
-
-# Only one deployment at a time; don't cancel in-progress deploys
-concurrency:
-  group: pages
-  cancel-in-progress: false
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -48,7 +41,7 @@ jobs:
              [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ]; then
             echo "Extracting text from PDF..."
             python - <<'EOF'
-          import pdfplumber, os
+          import pdfplumber
           with pdfplumber.open('html/ArvindVerma_Resume.pdf') as pdf:
               text = '\n'.join(page.extract_text() or '' for page in pdf.pages)
           with open('html/raw-resum-Aug162026.txt', 'w', encoding='utf-8') as f:
@@ -62,37 +55,21 @@ jobs:
       - name: Generate HTML resume
         run: python python/update-resume.py
 
-      - name: Commit generated files back to main
+      - name: Publish to docs/ (GitHub Pages source)
+        run: |
+          mkdir -p docs
+          cp html/resume-pdf.html docs/index.html
+          cp html/resume-pdf.html docs/resume-pdf.html
+
+      - name: Commit and push all generated files
         run: |
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git config user.name "github-actions[bot]"
-          git add html/resume-pdf.html html/raw-resum-Aug162026.txt
+          git add html/resume-pdf.html html/raw-resum-Aug162026.txt docs/
           git diff --staged --quiet || git commit -m "chore: auto-update resume [skip ci]"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Prepare site folder (add index.html entry point)
-        run: cp html/resume-pdf.html html/index.html
-
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./html
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
 
 
