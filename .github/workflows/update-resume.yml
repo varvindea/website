@@ -9,18 +9,21 @@ on:
       - 'python/update-resume.py'
       - '.github/workflows/update-resume.yml'
     branches:
-      - arvind-verma-resume
       - main
-      - master
-  workflow_dispatch:  # allow manual trigger from GitHub UI
+  workflow_dispatch:
 
 permissions:
   contents: write
   pages: write
   id-token: write
 
+# Only one deployment at a time; don't cancel in-progress deploys
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -39,26 +42,18 @@ jobs:
       - name: Install dependencies
         run: pip install -r python/requirements.txt
 
-      - name: Extract text from PDF (if PDF changed)
+      - name: Extract text from PDF (if PDF changed or manual run)
         run: |
-          # Detect if PDF was part of the push
           if git diff --name-only HEAD~1 HEAD 2>/dev/null | grep -q 'ArvindVerma_Resume.pdf' || \
              [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ]; then
-            echo "PDF changed or manual run — extracting text from PDF..."
+            echo "Extracting text from PDF..."
             python - <<'EOF'
           import pdfplumber, os
-          pdf_path = 'html/ArvindVerma_Resume.pdf'
-          txt_path = 'html/raw-resum-Aug162026.txt'
-          if os.path.exists(pdf_path):
-              pages = []
-              with pdfplumber.open(pdf_path) as pdf:
-                  for page in pdf.pages:
-                      pages.append(page.extract_text() or '')
-              with open(txt_path, 'w', encoding='utf-8') as f:
-                  f.write('\n'.join(pages))
-              print(f"Extracted {sum(len(p) for p in pages)} chars from PDF")
-          else:
-              print("PDF not found, skipping extraction")
+          with pdfplumber.open('html/ArvindVerma_Resume.pdf') as pdf:
+              text = '\n'.join(page.extract_text() or '' for page in pdf.pages)
+          with open('html/raw-resum-Aug162026.txt', 'w', encoding='utf-8') as f:
+              f.write(text)
+          print(f"Extracted {len(text)} chars from PDF")
           EOF
           else
             echo "PDF unchanged — using existing text file"
@@ -67,21 +62,37 @@ jobs:
       - name: Generate HTML resume
         run: python python/update-resume.py
 
-      - name: Commit generated files back to branch
+      - name: Commit generated files back to main
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
           git add html/resume-pdf.html html/raw-resum-Aug162026.txt
-          git diff --staged --quiet || git commit -m "chore: auto-update resume HTML [skip ci]"
+          git diff --staged --quiet || git commit -m "chore: auto-update resume [skip ci]"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Prepare site folder (add index.html entry point)
+        run: cp html/resume-pdf.html html/index.html
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./html
-          publish_branch: gh-pages
-          commit_message: "deploy: resume update from ${{ github.sha }}"
+          path: ./html
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
 
