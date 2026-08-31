@@ -1,0 +1,115 @@
+Arvind Verma
+Associate Director Software Engineering | AI Transformation Leadership | Product
+Engineering
+402-378-8550 | arvind_verma50@yahoo.com | GitHub | LinkedIn |
+TechnologyBlog
+EXPERIENCE SUMMARY
+Technology leader with 18 years of experience providing leadership, guidance, oversight, and
+mentorship in software engineering, product engineering, data engineering, multi-cloud
+environments (AWS, GCP, and Azure), AI, and Agentic AI application development, from
+ideation through production and enterprise-scale rollout. Adept at shaping long‑term Engineering
+strategy and roadmap, cross-functional leadership, resource and capacity planning, scaling
+high‑performing engineering teams, establishing governance frameworks, and partnering with
+senior executives to deliver measurable value. Deep knowledge of the financial domain, security
+analysis (both fundamental and technical), Data Packaging and Distribution, Monetization, and
+e-commerce applications targeting institutional customers.
+SKILLS & EXPERTISE
+AI & Machine Learning: Generative AI (GPT, Claude, Gemini), Agentic AI, Vertex AI, Google
+Agent Framework, RAG, MCP, Prompt Engineering, ML Model Development & Optimization,
+AI Governance & Responsible AI.
+Software & Full‑Stack Engineering: Architecture and Design Patterns, Microservices
+Architecture, API Lifecycle Management, Java Spring Boot, Python (Django/Flask),
+React/TypeScript, UI Frameworks, High‑Availability & Distributed Systems, Reliability &
+Performance Engineering, Observability & Monitoring (Elastic, OpenSearch, Datadog), Test
+Automation (Selenium, Fitnesse, Cucumber).
+Data Engineering & Platforms: Enterprise Data Engineering, Data Architecture & Modeling,
+Data Governance, Medallion Architecture, ETL/ELT, Big Data (Spark/Scala), Databricks,
+Snowflake, Delta Lake, Data Fabric, SQL/NoSQL (Oracle, Postgres, Aurora, SQL Server,
+MySQL, MongoDB, Redis).
+Cloud Architecture & Infrastructure: AWS, GCP, Azure, Multi‑Cloud Modernization, Serverless
+& Container Platforms, Cloud Security & IAM, Event‑Driven Architecture, Infrastructure as
+Code (Terraform), CI/CD Pipelines (GitHub Actions, Azure DevOps, Jenkins), Unix/Bash,
+Cloud CLIs, DevSecOps & Security Tools (Dependabot, MEND, Fortify, WIZ, ArmorCode).
+Leadership & Delivery: Engineering Leadership (teams 4–50), Org Scaling, Hiring & Mentoring,
+Technical Program Management, Cross‑Functional Leadership, Agile (SCRUM, SAFe, Kanban),
+Enterprise Program Delivery.
+WORK EXPERIENCE:
+Associate Director, Software Engineering 12/2019 –
+Present
+S&P Global, Virginia, USA
+AI, Agentic AI and Product Innovation
+● Ideated, architected, and launched the Xpressfeed AI Accelerator, introducing agentic
+workflows that significantly accelerated migration of legacy data products.
+● Drove enterprise adoption of GitHub Copilot, Claude Code, and other LLM‑powered
+development tools through structured enablement and cost‑optimization guidance.
+● Delivered full‑stack AI‑enabled applications using React, TypeScript, Java Spring Boot,
+Python, SQL, and Scala.
+● Led organization-wide AI transformation, including use‑case identification, ROI
+evaluation, and post‑implementation measurement.
+Data Engineering, Analytics & Multi‑Cloud Architecture
+● Built and managed large-scale Databricks pipelines delivering data across Delta Sharing,
+Snowflake, S3, and SFTP channels.
+● Directed migration of legacy ETL/ELT workloads into GCP, improving scalability,
+reliability, and cost efficiency.
+● Architected a horizontally scalable data engineering ecosystem that significantly reduced
+packaging time and improved client onboarding.
+● Designed and delivered microservice APIs in GCP, defining both application and
+infrastructure architecture.
+● Provided architectural leadership across AWS and GCP for full‑stack product
+development, AI workloads, and cloud-native data pipelines.
+GCP Infrastructure, APIs & Data Sharing
+● Designed and automated GCP infrastructure using Terraform, including storage,
+messaging, compute, IAM, and event-driven integrations.
+● Led development of secure, enterprise-grade APIs exposing curated BigQuery datasets
+through governed data‑sharing platforms.
+● Defined end‑to‑end authentication and authorization patterns (OAuth, service account
+impersonation, token-based access, fine-grained IAM) to strengthen platform security.
+● Established reusable Terraform modules and CI/CD patterns to standardize infrastructure
+provisioning across engineering teams.
+Work Experience: Previous Employer
+Tech Mahindra Limited – Engagement Manager, Omaha, Nebraska, USA 11/2011 to
+12/2019
+Key Contributions:
+● Directed cross-functional teams of 4–25 Software Engineers and SDETs in designing
+and delivering enterprise applications for Union Pacific Railroad’s Positive Train Control
+(PTC) initiative, a federally mandated safety program.
+● Scaled organisational capability, hiring, onboarding, and mentoring 50+ engineers to
+support mission-critical systems, fostering a culture of accountability and technical
+excellence.
+● Delivered safety-critical applications that ensured compliance with federal regulations,
+enhancing operational reliability and reducing risk across Union Pacific’s rail network.
+● Partnered with stakeholders to gather requirements, prioritise backlog, and define
+product enhancements, aligning technical delivery with business objectives.
+● Established CI/CD best practices, administering Jenkins pipelines to streamline
+deployments and strengthen test automation coverage.
+● Engineered automation frameworks, developed Python scripts for lab testing and built
+Java/SpringBoot tools for JMS-based microservices, improving efficiency and reducing
+manual effort.
+● Contributed hands-on technical expertise by writing unit-testable code for
+safety-critical applications, ensuring robustness and regulatory compliance.
+Work Experience: Previous Employer
+Impetus InfoTech India Pvt. Ltd – QA Test Engineer Indore, M.P., India 02/2010 – 11/2011
+Key Contributions:
+● Led a team of 4 QA Engineers, introducing automation practices that improved efficiency
+and reduced release cycles.
+● Contributed to Android mobile application development and quality assurance, ensuring
+cross-platform reliability.
+● Designed and executed comprehensive test strategies, strengthening product stability and
+user experience.
+Work Experience: Previous Employer
+Electronic Arts Games – QA Tester Hyderabad, Telangana, India 08/2008 – 02/2010
+Key Contributions:
+● Supported QA for bestselling titles, including FIFA, Wolverine, and The Sims, ensuring
+high performance and immersive user experiences.
+● Designed and executed regression, UI, and functionality test cases, contributing to
+consistent product quality.
+● Collaborated with game designers and developers, sparking an early interest in product
+design and engine development.
+Education
+● Master of Business Administration (Executive) in General Management from Symbiosis
+Institute of Business Management, Pune, Maharashtra, India. July 2012 - December 2014
+● B.E in Computer Science and Engineering from Malwa Institute of Technology, Indore,
+M.P. October 2004 - June 2008.
+Certification
+• AWS Cloud Practitioner: (expired; but actively using AWS services for the last 7 years)
+• SAFe 5 Practitioner: Certified
